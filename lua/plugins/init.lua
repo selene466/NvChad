@@ -150,6 +150,13 @@ local plugins = {
     end,
   },
 
+  ["sbdchd/neoformat"] = {
+    after = "nvim-autopairs",
+    config = function()
+      require "plugins.configs.neoformat"
+    end,
+  },
+
   ["goolord/alpha-nvim"] = {
     after = "base46",
     disable = true,
