@@ -138,7 +138,7 @@ local plugins = {
         end
     },
     ["sbdchd/neoformat"] = {
-        after = "nvim-autopairs",
+        after = "nvim-treesitter",
         config = function()
             require "plugins.configs.neoformat"
         end
