@@ -23,6 +23,19 @@ M.autopairs = function()
   cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
 end
 
+M.autotag = function()
+  local present, autotag = pcall(require, "nvim-ts-autotag")
+
+  if not present then
+    return
+  end
+
+  local options = {}
+
+  options = load_override(options, "windwp/nvim-ts-autotag")
+  autotag.setup(options)
+end
+
 M.blankline = function()
   local present, blankline = pcall(require, "indent_blankline")
 
