@@ -43,8 +43,6 @@ opt.splitbelow = true
 opt.splitright = true
 opt.pumheight = 10
 opt.cmdheight = 1
-opt.updatetime = 1000
-opt.timeoutlen = 800
 opt.backspace = "indent,eol,start"
 
 opt.cursorline = true
