@@ -48,6 +48,16 @@ lspconfig.eslint.setup {
     capabilities = M.capabilities
 }
 
+lspconfig.clangd.setup {
+    on_attach = M.on_attach,
+    capabilities = M.capabilities
+}
+
+lspconfig.jdtls.setup {
+    on_attach = M.on_attach,
+    capabilities = M.capabilities
+}
+
 lspconfig.sumneko_lua.setup {
     on_attach = M.on_attach,
     capabilities = M.capabilities,
