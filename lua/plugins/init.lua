@@ -152,7 +152,7 @@ local plugins = {
         wants = "nvim-treesitter"
     },
     ["phaazon/hop.nvim"] = {
-        after = "nvim-treesitter",
+        after = "vim-matchup",
         config = function()
             require "plugins.configs.hop"
         end
@@ -196,7 +196,7 @@ local plugins = {
     },
     -- Only load whichkey after all the gui
     ["folke/which-key.nvim"] = {
-        disable = false,
+        disable = true,
         module = "which-key",
         keys = {"<leader>", '"', "'", "`"},
         config = function()
