@@ -35,8 +35,8 @@ M.general = {
         -- Copy all
         ["<C-c>"] = {"<cmd> %y+ <CR>", "copy whole file"},
         -- line numbers
-        ["<leader>n"] = {"<cmd> set nu! <CR>", "toggle line number"},
-        ["<leader>rn"] = {"<cmd> set rnu! <CR>", "toggle relative number"},
+        -- ["<leader>n"] = {"<cmd> set nu! <CR>", "toggle line number"},
+        -- ["<leader>rn"] = {"<cmd> set rnu! <CR>", "toggle relative number"},
         -- update nvchad
         ["<leader>uu"] = {"<cmd> :NvChadUpdate <CR>", "update nvchad"},
         ["<leader>tt"] = {
@@ -105,14 +105,14 @@ M.tabufline = {
 M.comment = {
     plugin = true,
     -- toggle comment in both modes
-    n = {
-        ["<leader>/"] = {
-            function()
-                require("Comment.api").toggle.linewise.current()
-            end,
-            "toggle comment"
-        }
-    },
+    -- n = {
+    --     ["<leader>/"] = {
+    --         function()
+    --             require("Comment.api").toggle.linewise.current()
+    --         end,
+    --         "toggle comment"
+    --     }
+    -- },
     v = {
         ["<leader>/"] = {
             "<ESC><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>",
@@ -422,6 +422,16 @@ M.gitsigns = {
             end,
             "Toggle deleted"
         }
+    }
+}
+
+M.hop = {
+    plugin = true,
+    n = {
+        ["<leader>/"] = {"<cmd>HopPattern<CR>", opts = {noremap = true, silent = true}},
+        ["<leader>n"] = {"<cmd>HopLine<CR>", opts = {noremap = true, silent = true}},
+        ["<leader>s"] = {"<cmd>HopChar1<CR>", opts = {noremap = true, silent = true}},
+        ["<leader>w"] = {"<cmd>HopWord<CR>", opts = {noremap = true, silent = true}}
     }
 }
 

@@ -151,6 +151,12 @@ local plugins = {
         after = "nvim-treesitter",
         wants = "nvim-treesitter"
     },
+    ["phaazon/hop.nvim"] = {
+        after = "nvim-treesitter",
+        config = function()
+            require "plugins.configs.hop"
+        end
+    },
     ["goolord/alpha-nvim"] = {
         after = "base46",
         disable = true,
