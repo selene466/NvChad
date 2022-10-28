@@ -48,6 +48,11 @@ lspconfig.eslint.setup {
     capabilities = M.capabilities
 }
 
+lspconfig.intelephense.setup {
+    on_attach = M.on_attach,
+    capabilities = M.capabilities
+}
+
 lspconfig.clangd.setup {
     on_attach = M.on_attach,
     capabilities = M.capabilities
