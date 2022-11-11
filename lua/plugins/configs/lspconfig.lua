@@ -43,6 +43,12 @@ M.capabilities.textDocument.completion.completionItem = {
     }
 }
 
+lspconfig.emmet_ls.setup {
+    filetypes = {"html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "vue"},
+    on_attach = M.on_attach,
+    capabilities = M.capabilities
+}
+
 lspconfig.eslint.setup {
     on_attach = M.on_attach,
     capabilities = M.capabilities
